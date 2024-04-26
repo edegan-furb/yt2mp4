@@ -9,7 +9,7 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-image: url("/static/image.jpg"); 
+        background-image: url("/static/image.jpg");
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
@@ -86,5 +86,19 @@
         <input type="submit" value="Convert" />
       </form>
     </div>
+    <script>
+      // Function to handle displaying error message in an alert
+      function displayError(message) {
+        alert(message);
+      }
+
+      // Check if there's an error message passed from Flask and display it
+      window.onload = function () {
+        const errorMessage = "{{ error }}";
+        if (errorMessage) {
+          displayError(errorMessage);
+        }
+      };
+    </script>
   </body>
 </html>

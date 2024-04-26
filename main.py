@@ -58,7 +58,7 @@ def download():
             return "Failed to get video title."
     except Exception as e:
         # If any error occurs during the process, return an error message
-        return f"An error occurred: {str(e)}"
+        return render_template('index.html', error=str(e))
 
 # Start the Flask application
 if __name__ == '__main__':
